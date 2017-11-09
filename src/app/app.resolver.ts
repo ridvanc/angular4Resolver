@@ -8,8 +8,6 @@ export class AppResolver implements Resolve<any>{
         
     }
     resolve(route: ActivatedRouteSnapshot, rstate: RouterStateSnapshot) {
-        
-        console.log('Logging collected route paramater', route.params['name']);
         return this.http.get('https://jsonplaceholder.typicode.com/posts');
     }
 

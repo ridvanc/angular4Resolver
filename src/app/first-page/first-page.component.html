@@ -1,2 +1,7 @@
 <a [routerLink]="['/']">home</a>
 <a [routerLink]="['/second']">second</a>
+<ul *ngIf="users" >
+    <li *ngFor="let item of users">
+        {{item.title}}
+    </li>
+</ul>

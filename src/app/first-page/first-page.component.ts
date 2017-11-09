@@ -8,10 +8,12 @@ import 'rxjs/add/operator/map';
 })
 export class FirstPageComponent implements OnInit {
 
+  users = [];
   constructor(private actr: ActivatedRoute) {
     this.actr.data.map(data => data.cres.json()).subscribe((res) => {
-        console.log(res);
+      this.users = res;
     });
+
   }
 
   ngOnInit() {

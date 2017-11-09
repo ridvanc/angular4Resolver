@@ -11,7 +11,7 @@ const appRoutes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'first/:name',
+    path: 'first',
     component: FirstPageComponent,
     resolve: {
       cres: AppResolver
